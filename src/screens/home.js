@@ -1,10 +1,12 @@
 import React from "react";
+import Test from '../screens/myComponent/test' 
+
 
 
 const Home = () => {
   return (
    <div>
-     Home page
+  <Test />
    </div>
   );
 };

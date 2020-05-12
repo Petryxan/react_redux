@@ -1,7 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useSelector } from 'react-redux'
 
 const Navbar = () => {
+const money = useSelector((state) => state.pr1.money)
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="navbar-brand">My App</div>
@@ -34,6 +36,16 @@ const Navbar = () => {
               My Office
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="shop">
+             Shop
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/">
+             {money} Dollars
+            </NavLink>
+            </li>
         </ul>
         <span className="navbar-text">Navbar text with an inline element</span>
       </div>

@@ -1,0 +1,20 @@
+.project1 {
+    padding: 50px;
+    background-color: rgb(214, 214, 214)
+}
+
+.listVideo{
+    display: flex;
+    background-color: rgb(236, 236, 236);
+   min-height: 100;
+    list-style: none;
+    padding: 5px;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    margin-right: 50%;
+    cursor: pointer;
+}
+.li {
+    list-style: none;
+   
+}

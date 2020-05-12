@@ -1,0 +1,12 @@
+.card {
+    background-color: grey;
+    display: flex;
+    
+   min-height: 100;
+    list-style: none;
+    padding: 5px;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    margin-right: 50%;
+    cursor: pointer;
+}
