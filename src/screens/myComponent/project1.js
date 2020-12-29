@@ -7,15 +7,15 @@ import classes from "./styles.module.css";
 const Project1 = () => {
   const [value, setValue] = useState("");
 
-  const text = useSelector((state) => state.pr1.videos);
+  const text = useSelector(state => state.pr1.videos);
   const dispatch = useDispatch();
 
-  const onChangeHandler = (e) => {
+  const onChangeHandler = e => {
     const inputValue = e.target.value;
     setValue(inputValue);
   };
 
-  const onSubmit = (event) => {
+  const onSubmit = event => {
     event.preventDefault();
     if (value.trim()) {
       setValue("");
@@ -25,15 +25,15 @@ const Project1 = () => {
     }
   };
 
-  const onRemove = (key) => {
+  const onRemove = key => {
     dispatch(Remove(key));
   };
 
-  const onChangeCheckbox = (check) => {
+  const onChangeCheckbox = check => {
     dispatch(Check(check));
   };
 
-  const video = text.map((video) => (
+  const video = text.map(video => (
     <div key={video.key}>
       <li>
         <div className={styles.listVideo}>

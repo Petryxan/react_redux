@@ -12,20 +12,19 @@
   background-color: rgb(78, 78, 78);
   padding: 5px;
   cursor: pointer;
-  min-width: 15%;
-text-align: center;
-
+  min-width: 120px;
+  text-align: center;
 }
 
 .menu li {
-  
-   border-radius: 5px;
+  border-radius: 5px;
   list-style: none;
-    margin: 5px;
-    justify-content: space-around;
-    align-items: center;
-    padding-left: 12px;
-    background-color: rgb(44, 44, 44);
+  margin: 5px;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 12px;
+  background-color: rgb(44, 44, 44);
+  min-width: 100px;
 }
 
 .main {
