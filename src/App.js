@@ -1,8 +1,7 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Office } from "./screens/myOffice";
-
 import { Shop } from "./screens/shop";
 import { MyComponents } from "./screens/myComponents";
 import Home from "./screens/home";
@@ -11,6 +10,7 @@ import { Provider } from "react-redux";
 import { createStore, compose, applyMiddleware } from "redux";
 import rootReducers from "./redux/reducers";
 import thunk from "redux-thunk";
+import Header from "./components/header";
 
 const composeEnhancers =
   typeof window === "object" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
@@ -28,7 +28,7 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Navbar />
+        <Header />
         <div className="App">
           <Switch>
             <Route path={"/"} exact component={Home} />

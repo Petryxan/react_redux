@@ -1,0 +1,159 @@
+.header {
+  background-color: #533030;
+}
+
+.header_logo {
+  display: block;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(190, 182, 182);
+
+  // @media (min-width: 768px) {
+  //   display: flex;
+  //   flex-direction: row;
+  // }
+}
+
+// .header-bottom {
+//   background-color: #2c1919;
+//   position: absolute;
+//   width: 100%;
+//   z-index: 2;
+//   overflow: hidden;
+// }
+
+//  .search__placeholder {
+//    background-image: url(/imgs/s_icon.png);
+//   background-origin: content-box;
+//    background-repeat: no-repeat;
+//    background-position: right;
+//    background-color: rgb(44, 25, 25);
+//    border: none;
+//    padding: 7px;
+//    color: rgb(141, 93, 93);
+//    margin: 10px;
+//  }
+
+.hamburger-box ul {
+  list-style: none;
+  overflow: hidden;
+}
+
+.hamburger-list__link {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  min-width: 60px;
+  font-variant: small-caps;
+  font-variant-ligatures: normal;
+  line-height: 20px;
+  font-family: "droid_sansbold", sans-serif;
+
+  @media (min-width: 830px) {
+    padding: 32px 17px;
+  }
+}
+
+.hamburger-list__item {
+  @media (min-width: 830px) {
+    float: left;
+  }
+}
+
+.hamburger-list__link:hover,
+.hamburger-box .menu__btn:hover {
+  background-color: #533030;
+}
+
+.hamburger-list:active {
+  // content: "3";
+
+  color: rgb(139, 27, 27);
+}
+
+.hamburger-list {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.4s ease-out;
+
+  @media (min-width: 830px) {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+}
+
+.hamburger-box .menu__icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 42px 20px;
+  position: relative;
+  user-select: none;
+
+  @media (min-width: 830px) {
+    display: none;
+  }
+}
+
+.hamburger-box .menu__icon .menu__navicon {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.hamburger-box .menu__icon .menu__navicon:before,
+.hamburger-box .menu__icon .menu__navicon:after {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.hamburger-box .menu__icon .menu__navicon:before {
+  top: 5px;
+}
+
+.hamburger-box .menu__icon .menu__navicon:after {
+  top: -5px;
+}
+
+.hamburger-box .menu__btn {
+  display: none;
+}
+
+.hamburger-box .menu__btn:checked ~ .hamburger-list {
+  max-height: 300px;
+}
+
+.hamburger-box .menu__btn:checked ~ .menu__icon .menu__navicon {
+  background: transparent;
+}
+
+.hamburger-box .menu__btn:checked ~ .menu__icon .menu__navicon:before {
+  transform: rotate(-45deg);
+}
+
+.hamburger-box .menu__btn:checked ~ .menu__icon .menu__navicon:after {
+  transform: rotate(45deg);
+}
+
+.hamburger-box
+  .menu__btn:checked
+  ~ .menu__icon:not(.steps)
+  .menu__navicon:before,
+.hamburger-box
+  .menu__btn:checked
+  ~ .menu__icon:not(.steps)
+  .menu__navicon:after {
+  top: 0;
+}
